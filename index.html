@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘도, 코딩</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/오코로고.png">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="container nav">
+            <div class="logo">오늘도, 코딩</div>
+            <ul class="menu">
+                <li><a href="#about">소개</a></li>
+                <li><a href="#rules">규칙</a></li>
+                <li><a href="https://open.kakao.com/o/gU6ieMfi" class="btn-join">입장하기</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <div class="container">
+            <img src="img/오코로고.png" style="width: 150px; height: auto;" data-aos="fade-up">
+            <h1 data-aos="fade-up">
+                오늘도, 코딩<br>
+                함께 성장하는 <span>코딩 커뮤니티</span>
+            </h1>
+            <p data-aos="fade-up">맛코딩 = 맛소금</p>
+            <a href="https://open.kakao.com/o/gU6ieMfi" class="cta-button" data-aos="slide-up" data-aos-delay="100">오픈채팅 참여</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2 data-aos="fade-up">우리는 무엇을 하나요??</h2>
+            <div class="features">
+                <div class="card" data-aos="fade-up">
+                    <h3>지식 공유</h3>
+                    <p>에러 해결과 기능 구현을 함께 고민합니다.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>잡담</h3>
+                    <p>코딩 외에도 일상의 즐거움을 나누며 편안하게 소통합니다.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>프로젝트</h3>
+                    <p>6개월에 한번, 팀원들끼리 서로 협력하여 프로젝트를 완성합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rules">
+        <div class="container" data-aos="fade-up">
+            <h2>방 운영 수칙</h2>
+            <ul>
+                <li>욕설 사용 금지</li>
+                <li>존댓말 사용</li>
+                <li>들낙 많이 금지</li>
+                <li>권력남용 금지</li>
+                <li>홍보는 하루에 2번만</li>
+                <li>과도한 봇 사용 금지</li>
+                <li>보이스룸 인당 주에 최대 3번</li>
+                <li>멘션 후 튀기 금지</li>
+                <li>새로운 사람들 반겨주기</li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2026 <strong>오늘도, 코딩</strong> & <strong>서울민트초코</strong>. All rights reserved.</p>
+        <p class="notice">
+            본 사이트의 모든 콘텐츠는 저작권법의 보호를 받으며, <br class="mobile-br">
+            <strong>허가받지 않은 무단 전재, 복제 및 재배포를 엄격히 금합니다.</strong>
+        </p>
+        <p class="maker">사이트 제작자: <a href="https://github.com/minirang">서울민트초코</a></p>
+        <p class="maker">도움: <a href="https://chatgpt.com">ChatGPT</a></p>
+        <p class="maker">문의: <a href="https://open.kakao.com/o/sJdbg89h">방장 오픈프로필</a><!-- <a href="mailto:">@</a> --></p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.querySelectorAll('#rules li').forEach(li => {
+            if (li.textContent.includes('금지')) {
+                li.classList.add('forbidden');
+            }
+        });
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
