@@ -47,7 +47,7 @@ body {
     color: var(--primary);
     font-weight: bold;
     font-size: 1.3rem;
-    cursor: default;
+    cursor: pointer;
 }
 
 .menu {
@@ -249,6 +249,7 @@ footer .maker a {
     border-radius: 15px;
     text-align: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
+    /* transition: box-shadow 0.3s ease; AOS 라이브러리때매 적용이 안되고 !important 해야 되지만 라이브러리랑 충돌되서 일단 남겨두는중 */
 }
 
 .person-card:hover {
@@ -286,6 +287,12 @@ footer .maker a {
     display: block;
     margin: 10px auto 0;
     object-fit: contain;
+}
+
+.msg {
+    width: 450px;
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
@@ -348,5 +355,9 @@ footer .maker a {
 
     footer {
         font-size: 0.8rem;
+    }
+
+    .msg {
+        width: 270px;
     }
 }
