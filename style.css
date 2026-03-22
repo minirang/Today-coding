@@ -120,6 +120,13 @@ body {
     border-radius: 999px;
     text-decoration: none;
     font-weight: bold;
+    transition: opacity 0.3s ease, background 0.3s ease, transform 0.3s ease !important;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+    background: #dfd005;
+    transform: translateY(-2px) !important;
 }
 
 section {
