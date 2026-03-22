@@ -194,6 +194,7 @@ footer .maker a {
 }
 
 #rules li {
+    cursor: default;
     background: var(--card);
     padding: 15px 20px;
     border-radius: 10px;
@@ -225,6 +226,59 @@ footer .maker a {
 #rules li.forbidden::before {
     content: "✕";
     color: #ff4d4d;
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.person-card {
+    cursor: default;
+    background: var(--card);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.person-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.person-card .img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.person-card h3 {
+    margin: 10px 0 5px;
+}
+
+.role {
+    color: var(--primary);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.intro-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px auto 0;
+    object-fit: contain;
 }
 
 @media (max-width: 768px) {
