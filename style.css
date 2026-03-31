@@ -86,7 +86,6 @@ body {
     background:
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
         url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80");
-
     background-size: cover;
     background-position: center;
 }
@@ -237,7 +236,7 @@ footer .maker a {
 
 .people-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
     gap: 30px;
     margin-top: 40px;
 }
@@ -296,6 +295,10 @@ footer .maker a {
 }
 
 @media (max-width: 768px) {
+    .greeting-msg {
+        font-size: 1.51rem !important;
+    }
+
     #hero h1 {
         font-size: 1.7rem;
     }
@@ -359,5 +362,9 @@ footer .maker a {
 
     .msg {
         width: 270px;
+    }
+
+    .people-grid {
+        grid-template-columns: 1fr;
     }
 }
